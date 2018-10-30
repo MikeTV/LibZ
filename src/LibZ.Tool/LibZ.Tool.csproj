@@ -98,6 +98,10 @@
       <Project>{46CEC914-26B0-4027-BA64-78154174274E}</Project>
       <Name>LibZ.Tool.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LibZ.Utils\LibZ.Utils.csproj">
+      <Project>{9977663f-ab99-4e4e-9677-92a7539e01d1}</Project>
+      <Name>LibZ.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

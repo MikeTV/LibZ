@@ -46,6 +46,12 @@
     <Compile Include="LibZResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibZ.Utils\LibZ.Utils.csproj">
+      <Project>{9977663f-ab99-4e4e-9677-92a7539e01d1}</Project>
+      <Name>LibZ.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /y /d $(TargetPath) $(ProjectDir)..\LibZ.Tool.InjectIL\Resources\LibZ.Bootstrap.40.dll</PostBuildEvent>
