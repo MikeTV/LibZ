@@ -55,6 +55,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using LibZ.Msil;
 using LibZ.Tool.InjectIL;
+using LibZ.Utils;
 using Mono.Cecil;
 using NLog;
 
@@ -72,7 +73,7 @@ namespace LibZ.Tool.Tasks
 		private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
 		/// <summary>Hash calculator.</summary>
-		private static readonly MD5 MD5Service = MD5.Create();
+		private static readonly SHA1 HashAlgorithm = SHA1CryptoServiceProvider.Create();
 
 		/// <summary>The regular expression to parse resource name</summary>
 		protected static readonly Regex ResourceNameRx = new Regex(
@@ -220,9 +221,7 @@ namespace LibZ.Tool.Tasks
 		/// <returns>Hash of given text.</returns>
 		protected static Guid Hash(string text)
 		{
-			return new Guid(
-				MD5Service.ComputeHash(
-					Encoding.UTF8.GetBytes(text.ToLowerInvariant())));
+			return SHA1Utils.Create(text);
 		}
 
 		/// <summary>Hashes the specified text.</summary>

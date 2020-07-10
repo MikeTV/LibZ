@@ -52,10 +52,9 @@ using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using LibZ.Utils;
 using Microsoft.Win32;
 
 namespace LibZ.Injected
@@ -300,12 +299,9 @@ namespace LibZ.Injected
 		/// <returns>A hash.</returns>
 		private static Guid Hash(string text)
 		{
-			return new Guid(
-				MD5.Create().ComputeHash(
-					Encoding.UTF8.GetBytes(
-						text.ToLowerInvariant())));
-		}
-
+			return SHA1Utils.Create(text);
+		}		
+	
 		private static void Debug(string message)
 		{
 			if (message != null && UseTrace)

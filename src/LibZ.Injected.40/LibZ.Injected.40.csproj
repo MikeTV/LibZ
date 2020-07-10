@@ -44,6 +44,12 @@
   <ItemGroup>
     <Folder Include="Decoders\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibZ.Utils\LibZ.Utils.csproj">
+      <Project>{9977663F-AB99-4E4E-9677-92A7539E01D1}</Project>
+      <Name>LibZ.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /y /d $(TargetPath) $(ProjectDir)..\LibZ.Tool.InjectIL\Resources\LibZ.Injected.40.dll</PostBuildEvent>

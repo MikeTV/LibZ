@@ -67,6 +67,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Microsoft.Win32;
+using LibZ.Utils;
 #if !NET35
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
@@ -916,8 +917,8 @@ namespace LibZ.Bootstrap
 			/// <value>The length of the storage.</value>
 			public int StorageLength { get; protected internal set; }
 
-			/// <summary>Gets or sets the codec name.</summary>
-			/// <value>The codec name.</value>
+			/// <summary>Guid based on SHA-1 hash.</summary>
+			/// <value>Guid.</value>
 			public string CodecName { get; protected internal set; }
 
 			/// <summary>MD5 hash.</summary>
@@ -1515,38 +1516,38 @@ namespace LibZ.Bootstrap
 
 		#region class Hash
 
-		/// <summary>MD5 calculator.</summary>
+		/// <summary>Hash calculator.</summary>
 		internal class Hash
 		{
 			#region public interface
 
 			/// <summary>Computes the MD5 for specified byte array.</summary>
 			/// <param name="bytes">The bytes.</param>
-			/// <returns>MD5.</returns>
+			/// <returns>Guid.</returns>
 			public static Guid Get(byte[] bytes)
 			{
-				return new Guid(MD5.Create().ComputeHash(bytes));
+				return SHA1Utils.Create(bytes);
 			}
 
 			/// <summary>Computes MD5 for the specified text (case insensitive).</summary>
 			/// <param name="text">The text.</param>
-			/// <returns>MD5.</returns>
+			/// <returns>Guid.</returns>
 			public static Guid Get(string text)
 			{
 				return Get(Encoding.UTF8.GetBytes(text.ToLowerInvariant()));
 			}
 
-			#endregion
-		}
+#endregion
+		}		
 
-		#endregion
+#endregion
 
-		#region Helpers
+#region Helpers
 
 		/// <summary>Simple helper functions.</summary>
 		public static class Helpers
 		{
-			#region consts
+#region consts
 
 			/// <summary>Trace key path.</summary>
 			public const string REGISTRY_KEY_PATH = @"Software\Softpark\LibZ";
@@ -1563,7 +1564,7 @@ namespace LibZ.Bootstrap
 			/// <summary>Flag indicating if Trace should be used.</summary>
 			private static readonly bool UseTrace;
 
-			#endregion
+#endregion
 
 			/// <summary>Initializes the <see cref="Helpers"/> class.</summary>
 			static Helpers()
@@ -1655,6 +1656,6 @@ namespace LibZ.Bootstrap
 			}
 		}
 
-		#endregion
+#endregion
 	}
 }
