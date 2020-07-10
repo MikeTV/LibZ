@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{2D9FB6F9-E0EF-4347-9894-BAECAD8881FB}"
 	ProjectSection(SolutionItems) = preProject
@@ -51,8 +51,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibZ.Msil", "LibZ.Msil\LibZ.Msil.csproj", "{68297D08-A36C-4C4D-8E41-2644FD7B3896}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET40", ".NET40", "{36F7AAFB-9EF7-4351-B5F5-0FC24E9534D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibZ.Utils", "LibZ.Utils\LibZ.Utils.csproj", "{9977663F-AB99-4E4E-9677-92A7539E01D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,10 +106,6 @@ Global
 		{68297D08-A36C-4C4D-8E41-2644FD7B3896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68297D08-A36C-4C4D-8E41-2644FD7B3896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68297D08-A36C-4C4D-8E41-2644FD7B3896}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9977663F-AB99-4E4E-9677-92A7539E01D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9977663F-AB99-4E4E-9677-92A7539E01D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9977663F-AB99-4E4E-9677-92A7539E01D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9977663F-AB99-4E4E-9677-92A7539E01D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

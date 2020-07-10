@@ -207,6 +207,16 @@ namespace LibZ.Tool
 			{
 				Log.Error("{0}: {1}", e.GetType().Name, e.Message);
 				Log.Debug(e.StackTrace);
+
+				if(e is AggregateException){
+					var a = e as AggregateException;
+					foreach(var ex in a.InnerExceptions)
+                    {
+						Log.Error("{0}: {1}", ex.GetType().Name, ex.Message);
+						Log.Debug(ex.StackTrace);
+					}
+                }
+
 				return 1;
 			}
 		}

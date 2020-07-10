@@ -52,12 +52,6 @@
     <Compile Include="LibZContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibZ.Utils\LibZ.Utils.csproj">
-      <Project>{9977663F-AB99-4E4E-9677-92A7539E01D1}</Project>
-      <Name>LibZ.Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
