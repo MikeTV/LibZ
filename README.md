@@ -1,6 +1,8 @@
 ## LibZ, the alternative to ILMerge
 LibZ is an alternative to ILMerge. It allows you to distribute your applications or libraries as a single file with assemblies embedded into it or combined together into a container file.
 
+## Compilation dependency keyfile
+An SNK file is required.  Open a [Visual Studio command prompt](https://msdn.microsoft.com/en-us/library/ms229859%28v=vs.110%29.aspx) as *Administrator*, navigate to the root LibZ folder, and execute: `sn -k LibZ.snk` 
 ## Migration from codeplex
 I believe sources and documentation have been fully migrated but you can still access old website [here](http://libz.codeplex.com)
 
